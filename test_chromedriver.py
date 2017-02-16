@@ -8,7 +8,7 @@ import sys
 
 
 
-driver = webdriver.Chrome('vendor/chromedriver/chromedriver')
+driver = webdriver.Chrome('vendor/chromedriver/bin/chromedriver')
 final_dict={}
 final_output = []
 temp_output=[]
