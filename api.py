@@ -26,9 +26,9 @@ api.add_resource(Server, '/')
 def uri_to_imagelist(uri):
     final_image_list = []
     uri_param = uri
-    #driver = webdriver.PhantomJS('bin/phantomjs')
+    driver = webdriver.PhantomJS('vendor/phantomjs/bin/phantomjs')
     #sdfs
-    driver = webdriver.Chrome('vendor/chromedriver/chromedriver')
+    #driver = webdriver.Chrome('vendor/chromedriver/chromedriver')
     driver.get("http://homes.com/" + uri_param)
     time.sleep(3)
     first_image_url = driver.find_element_by_class_name("img").get_attribute("src")
