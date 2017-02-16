@@ -5,8 +5,6 @@ import json
 import sys
 import time
 
-#refactored to use scrapy
-
 ##Web Server Code
 
 app = Flask(__name__)
@@ -27,7 +25,9 @@ api.add_resource(Server, '/')
 def uri_to_imagelist(uri):
     final_image_list = []
     uri_param = uri
-    driver = webdriver.Chrome('chromedriver/chromedriver')
+    #driver = webdriver.PhantomJS('bin/phantomjs')
+    #sdfs
+    driver = webdriver.Chrome('bin/chromedriver')
     driver.get("http://homes.com/" + uri_param)
     time.sleep(3)
     first_image_url = driver.find_element_by_class_name("img").get_attribute("src")

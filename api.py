@@ -4,6 +4,7 @@ from selenium import webdriver
 import json
 import sys
 import time
+import os
 
 ##Web Server Code
 
@@ -42,4 +43,4 @@ def uri_to_imagelist(uri):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port = int (os.environ.get('PORT', 5000)))
