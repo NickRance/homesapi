@@ -43,4 +43,5 @@ def uri_to_imagelist(uri):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host = os.getenv("IP","0.0.0.0"),port = int (os.getenv('PORT', 5000)))
+    #app.run(debug=True, host = os.getenv("IP","0.0.0.0"),port = int (os.getenv('PORT', 5000)))
+    app.run(port=33507)
