@@ -8,7 +8,7 @@ import sys
 
 
 
-driver = webdriver.Chrome('chromedriver/chromedriver')
+driver = webdriver.Chrome('bin/chromedriver')
 final_dict={}
 final_output = []
 temp_output=[]
@@ -16,7 +16,7 @@ uri_param = "property/3611-bell-st-norfolk-va-23513/id-400028631997/"
 
 
 driver.get("http://homes.com/"+uri_param)
-#time.sleep(2)
+time.sleep(2)
 images=driver.find_elements_by_class_name("img")
 print('images:')
 print(images)
