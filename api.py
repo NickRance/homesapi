@@ -26,6 +26,7 @@ def uri_to_imagelist(uri):
     final_image_list = []
     uri_param = uri
     #driver = webdriver.PhantomJS('bin/phantomjs')
+    #sdfs
     driver = webdriver.Chrome('vendor/chromedriver/chromedriver')
     driver.get("http://homes.com/" + uri_param)
     time.sleep(3)
