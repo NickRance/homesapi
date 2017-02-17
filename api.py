@@ -30,6 +30,7 @@ def uri_to_imagelist(uri):
     #sdfs
     #driver = webdriver.Chrome('vendor/chromedriver/chromedriver')
     driver.get("http://homes.com/" + uri_param)
+    print("Opened the url", file=sys.stderr)
     time.sleep(3)
     first_image_url = driver.find_element_by_class_name("img").get_attribute("src")
     gallerySize = int((driver.find_element_by_xpath(
